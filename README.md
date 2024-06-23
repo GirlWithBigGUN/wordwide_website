@@ -1,2 +1,4 @@
-# wordwide_website
+# Website for english club "WordWide"
+
+College project
  
