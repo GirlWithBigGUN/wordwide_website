@@ -18,6 +18,7 @@
         >
         Записаться на пробное занятие
         </h2>
+        <form action="mail.php" method="post">
         <div class="regforminputs">
           <my-input id="name_main"
           style="position: absolute;
@@ -26,7 +27,7 @@
           margin-left:5%;
           margin-top:12vh;
           ;"
-          placeholder="Имя*">
+          placeholder="Имя*" type="text" name="name">
           </my-input>
           <my-input id="phone_main"
           style="position: absolute;
@@ -35,7 +36,7 @@
           margin-left:5%;
           margin-top:22vh;
           ;"
-          placeholder="+7(___)-___-__-__*">
+          placeholder="+7(___)-___-__-__*" type="text" name="phone">
           </my-input>
           <my-input id="email"
           style="position: absolute;
@@ -44,7 +45,7 @@
           margin-left:5%;
           margin-top:32vh;
           ;"
-          placeholder="вашапочта@mail.ru">
+          placeholder="вашапочта@mail.ru" type="text" name="email">
           </my-input>
         </div>
         <div>
@@ -61,7 +62,8 @@
           </div>
           <div id="policy_button" class="button" style="cursor: pointer;color: blue;font-family: 'Comfortaa', sans-serif;margin-left:10vh;margin-top:2vh" @click="$router.push('/policy'),this.$emit('update:show', false)">Политика Конфиденциальности</div>
         </div>
-        <my-button id="s_a_a_main" class="regformbutton" @click = "sendEmail">Оставить Заявку</my-button>
+        <my-button id="s_a_a_main" class="regformbutton" type="submit" name="submit" value="Submit">Оставить Заявку</my-button>
+        </form>
         <div class="promises" style="
           font-family: 'Comfortaa', sans-serif;
           

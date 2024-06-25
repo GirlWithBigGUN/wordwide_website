@@ -1,5 +1,5 @@
 <template>
-    
+  <form action="mail.php" method="post">
   <div class="dialog" v-if="show === true" @click.stop="hideDialog">
     <button id="hide_dial_btn_one" style="
       position: absolute; 
@@ -11,6 +11,7 @@
       z-index: 498;
       border: solid 0px #c5c5c5;">
     </button>
+    
       <div @click.stop >
         <div class="regform">
           <h2 style="
@@ -24,6 +25,7 @@
           >
           Быстрая запись на курс
           </h2>
+          <form action="mail.php" method="post"></form>
           <div class="regforminputs">
             <my-input  v-on:input = "fill_checker" id="name_main"
             style="position: absolute;
@@ -34,7 +36,7 @@
             margin-top:15vh;
             z-index: 501
             ;"
-            placeholder="Имя*">
+            placeholder="Имя*" type="text" name="name">
             </my-input>
             <my-input  v-on:input = "fill_checker" id="phone_main"
             style="position: absolute;
@@ -45,7 +47,7 @@
             margin-top:25vh;
             z-index: 501
             ;"
-            placeholder="+7(___)-___-__-__*">
+            placeholder="+7(___)-___-__-__*" type="text" name="phone">
             </my-input>
             <my-input  v-on:input = "fill_checker" id="email"
             style="position: absolute;
@@ -56,7 +58,7 @@
             margin-top:35vh;
             z-index: 501
             ;"
-            placeholder="вашапочта@mail.ru">
+            placeholder="вашапочта@mail.ru" type="text" name="email">
             </my-input>
             <div>
               <input v-on:click = "fill_checker" type="checkbox" id="policy_chb_main" style="
@@ -76,12 +78,15 @@
           <my-button id="s_a_a_main" class="regformbutton_deact" style="
             width:60vh;
             margin-top:4vh !important;
-          " @click = "sendEmail">Оставить Заявку</my-button>
-          
+          " type="submit" name="submit" value="Submit">Оставить Заявку</my-button>
+        
         </div>
-      </div>
+        
+        
+    </div>
       
   </div>
+  </form>
 </template>
 
 
